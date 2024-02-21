@@ -1,0 +1,23 @@
+<p>Employee Name is : <span class="emp_name">{{employeeName}}</span> </p>
+<p>Employee Designation is :<span class="emp_name">{{employeeDes}}</span> </p>
+<img [src]="employeeImage" alt="" style="height: 300px; width: 350px;">
+<h4 class="text-success mt-3 ms-2">Employee Location : Kakkanad</h4>
+
+<div class="d-flex justify-content-center align-items-center  mt-5 flex-column ">
+    <input type="text" placeholder="username" class="form-control w-25"  #uname/>
+    <button class="btn btn-danger m-3" (click)="userAdd(uname)">Add User</button>
+</div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+
+<div class="col-md-4">
+    <form action="" class="mt-5 shadow p-5">
+        <input type="text" placeholder="Enter Designation" class="form-control mb-3" [(ngModel)] ="employeeDesig" name="employeeDes" >
+        <input type="text" placeholder="Enter Salary" class="form-control mb-3"  [(ngModel)] ="employeeSalary" name="employeeSal" >
+        <input type="text" placeholder="Enter location" class="form-control mb-3"   [(ngModel)] ="employeeLocation" name="employeeLoc">
+        <input type="button" value="Add details" class="btn btn-success" (click)="formSubmit()">
+    </form>
+</div>
+<div class="col-md-4"></div>
+</div>
